@@ -1,4 +1,4 @@
-import Scribble from "../../../assets/scribble.webp";
+import Scribble from "../../../assets/Scribble.webp";
 
 const EnterEmail = () => {
   return (
