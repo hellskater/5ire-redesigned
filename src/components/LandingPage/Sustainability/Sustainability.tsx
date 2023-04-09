@@ -26,13 +26,13 @@ const Sustainability = () => {
         </div>
       </div>
 
-      <section className="flex flex-col md:flex-row items-center p-10 mt-10">
+      <section className="flex flex-col md:flex-row items-center md:p-10 p-5 mt-10">
         <h1 className="text-xl md:text-3xl font-semibold md:w-1/2">
           We want to play our <br />
           part in building a sustainable future and positively impacting <br />
           the planet.{" "}
         </h1>
-        <div className="relative h-72 md:w-1/2 w-full">
+        <div className="relative h-72 md:w-1/2 w-full mt-5">
           <Image
             src={SustainableLogo}
             alt="sustainable-logo"
@@ -43,7 +43,7 @@ const Sustainability = () => {
       </section>
 
       {/* Globe */}
-      <section className="px-10 md:mt-32">
+      <section className="md:px-10 px-5 md:mt-32">
         <h2 className="text-3xl md:text-5xl font-bold tracking-wider">
           Sustainable Development Goals (SDGs)
         </h2>
