@@ -12,6 +12,7 @@ import { FaRegHandshake } from "react-icons/fa";
 import { useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
 import Eco from "../../../assets/eco.webp";
+import SustainableLogo from "../../../assets/sustainableLogo.png";
 
 const HeroSection = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -39,7 +40,7 @@ const HeroSection = () => {
           </div>
 
           <motion.img
-            src="https://cdn-icons-png.flaticon.com/512/3412/3412024.png"
+            src={SustainableLogo.src}
             alt="sustainability"
             className="w-40 h-40 mt-10 object-contain"
             animate={{ rotate: 360 }}
