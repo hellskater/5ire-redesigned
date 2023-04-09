@@ -2,17 +2,20 @@
 import { motion } from "framer-motion";
 import GradientWave from "../../GradientWave/GradientWave";
 import ThinStraightArrow from "../../../assets/ThinStraightArrow.webp";
+import DownArrow from "../../../assets/BigDownArrow.webp";
+
 import EnterEmail from "./EnterEmail";
 import AnnouncementCard from "./AnnouncementCard";
 import { SiVitest } from "react-icons/si";
 import { HiOutlineDocumentText } from "react-icons/hi";
 import { FaRegHandshake } from "react-icons/fa";
 import { useMediaQuery } from "@mantine/hooks";
+import Image from "next/image";
 
 const HeroSection = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
   return (
-    <div className="min-h-[140vh] pb-20">
+    <div className="min-h-[130vh] pb-20">
       {/* Gradient Animation */}
 
       {isDesktop && <GradientWave />}
@@ -74,6 +77,15 @@ const HeroSection = () => {
           Icon={FaRegHandshake}
         />
       </section>
+
+      <div className="relative md:h-80 h-52 mt-10">
+        <Image
+          src={DownArrow}
+          alt="down-arrow"
+          fill
+          className="h-full w-full object-contain"
+        />
+      </div>
     </div>
   );
 };

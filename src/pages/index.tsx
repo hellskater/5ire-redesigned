@@ -1,4 +1,5 @@
 import HeroSection from "@/components/LandingPage/HeroSection/HeroSection";
+import Sustainability from "@/components/LandingPage/Sustainability/Sustainability";
 import Head from "next/head";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <HeroSection />
+      <Sustainability />
     </>
   );
 }
