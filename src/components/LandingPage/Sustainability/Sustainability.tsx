@@ -96,7 +96,12 @@ const Sustainability = () => {
             alt="fire coin"
             className="w-40 h-40 absolute bottom-32 left-20 hue-rotate-180 object-contain"
             animate={{ rotateX: 360 }}
-            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "linear",
+              direction: "alternate",
+            }}
           />
         </>
       )}
