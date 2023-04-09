@@ -1,5 +1,6 @@
 import BuildToEarn from "@/components/LandingPage/BuildToEarn/BuildToEarn";
 import HeroSection from "@/components/LandingPage/HeroSection/HeroSection";
+import MidSection from "@/components/LandingPage/MidSection/MidSection";
 import Sustainability from "@/components/LandingPage/Sustainability/Sustainability";
 import Head from "next/head";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroSection />
       <Sustainability />
       <BuildToEarn />
+      <MidSection />
     </>
   );
 }
