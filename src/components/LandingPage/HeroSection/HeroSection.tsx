@@ -12,7 +12,7 @@ import { FaRegHandshake } from "react-icons/fa";
 import { useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
 import Eco from "../../../assets/eco.webp";
-import SustainableLogo from "../../../assets/sustainableLogo.png";
+import RotatingLogo from "./RotatingLogo";
 
 const HeroSection = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -39,13 +39,7 @@ const HeroSection = () => {
             />
           </div>
 
-          <motion.img
-            src={SustainableLogo.src}
-            alt="sustainability"
-            className="w-40 h-40 mt-10 object-contain"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-          />
+          <RotatingLogo />
 
           <p className="text-center text-sm md:text-xl px-2 md:text-white font-semibold tracking md:w-[60%] mt-10">
             5ireChain is a layer-1 EVM compatible smart contract platform that
