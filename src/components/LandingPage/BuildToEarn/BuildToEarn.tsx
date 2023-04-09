@@ -1,4 +1,5 @@
 import HandwrittenNumber from "@/components/Handwritten/HandwrittenNumber";
+import { useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
 import BuildToEarnImage from "../../../assets/buildToEarn.svg";
 import Star1 from "../../../assets/star1.png";
@@ -11,8 +12,10 @@ const points = [
 ];
 
 const BuildToEarn = () => {
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
   return (
-    <main className="flex md:min-h-[65vh] min-h-[140vh] relative items-center mt-48 text-white w-full justify-between p-5 md:p-10">
+    <main className="flex md:min-h-[65vh] min-h-[140vh] relative items-center md:mt-48 text-white w-full justify-between p-5 md:p-10">
       <div className="gradient-bg-image absolute -top-10 -left-40 w-[120rem] h-[32rem] z-[-1] -rotate-12" />
 
       <div className="md:w-[60%] flex flex-col justify-center items-start gap-5">
@@ -39,20 +42,22 @@ const BuildToEarn = () => {
         />
       </div>
 
-      <div className="absolute -top-32 left-20 animate-bounce">
-        <div className="relative">
-          <img
-            src="https://www.pngall.com/wp-content/uploads/10/Ethereum-Classic-Logo-PNG-Pic.png"
-            alt="eth"
-            className="h-32 w-32 object-contain"
-          />
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/599/599503.png"
-            alt="star"
-            className="h-14 w-14 absolute -top-8 -left-6 object-contain"
-          />
+      {isDesktop && (
+        <div className="absolute -top-32 left-20 animate-bounce">
+          <div className="relative">
+            <img
+              src="https://www.pngall.com/wp-content/uploads/10/Ethereum-Classic-Logo-PNG-Pic.png"
+              alt="eth"
+              className="h-32 w-32 object-contain"
+            />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/599/599503.png"
+              alt="star"
+              className="h-14 w-14 absolute -top-8 -left-6 object-contain"
+            />
+          </div>
         </div>
-      </div>
+      )}
     </main>
   );
 };
