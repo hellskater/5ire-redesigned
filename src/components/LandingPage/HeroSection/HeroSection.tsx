@@ -11,6 +11,7 @@ import { HiOutlineDocumentText } from "react-icons/hi";
 import { FaRegHandshake } from "react-icons/fa";
 import { useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
+import Eco from "../../../assets/eco.webp";
 
 const HeroSection = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -21,7 +22,7 @@ const HeroSection = () => {
       {isDesktop && <GradientWave />}
 
       {/* Header */}
-      <section className="md:mt-10 mt-16 ">
+      <section className="md:mt-10 mt-16 relative">
         <header className="flex flex-col items-center justify-center ">
           <p className="text-2xl md:text-4xl text-center font-bold font-mono md:text-white">
             BLOCKCHAIN MEETS
@@ -56,6 +57,19 @@ const HeroSection = () => {
             <EnterEmail />
           </div>
         </header>
+
+        {isDesktop && (
+          <div className="absolute -bottom-40 right-0 2xl:right-20">
+            <div className="relative h-80 w-80">
+              <Image
+                src={Eco}
+                alt="ecology"
+                fill
+                className="h-full w-full object-contain"
+              />
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Announcement Cards */}

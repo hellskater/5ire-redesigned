@@ -5,11 +5,14 @@ import SustainableLogo from "../../../assets/sustainableLogo.png";
 import InverseUnderline from "../../../assets/inverse-underline.svg";
 import SustainableGoals from "./SustainableGoals";
 import { useMediaQuery } from "@mantine/hooks";
+import EVM from "../../../assets/evm.webp";
+import FireCoin from "../../../assets/5ire.png";
+import { motion } from "framer-motion";
 
 const Sustainability = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
   return (
-    <main className="text-gray-700">
+    <main className="text-gray-700 relative">
       <div className="relative w-fit mx-auto">
         {isDesktop && <SustainableGoals />}
 
@@ -74,6 +77,29 @@ const Sustainability = () => {
           className="h-full w-full object-contain"
         />
       </div>
+
+      {isDesktop && (
+        <>
+          <div className="absolute bottom-0 right-0">
+            <div className="relative h-96 w-96">
+              <Image
+                src={EVM}
+                alt="evm"
+                fill
+                className="h-full w-full object-contain"
+              />
+            </div>
+          </div>
+
+          <motion.img
+            src={FireCoin.src}
+            alt="fire coin"
+            className="w-40 h-40 absolute bottom-32 left-20 hue-rotate-180 object-contain"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+          />
+        </>
+      )}
     </main>
   );
 };

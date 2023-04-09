@@ -19,3 +19,7 @@
   background-size: cover;
   background-repeat: repeat-x;
 }
+
+.mirror {
+  transform: scaleX(-1);
+}
