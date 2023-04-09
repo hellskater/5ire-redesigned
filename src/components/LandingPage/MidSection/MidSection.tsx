@@ -4,7 +4,7 @@ import MidSectionStats from "./MidSectionStats";
 
 const MidSection = () => {
   return (
-    <div className="pb-24">
+    <div>
       <GoalAlignment />
       <MidSectionStats />
     </div>

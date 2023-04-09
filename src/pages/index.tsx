@@ -1,3 +1,4 @@
+import BlogCarousel from "@/components/BlogCarousel/BlogCarousel";
 import BuildToEarn from "@/components/LandingPage/BuildToEarn/BuildToEarn";
 import HeroSection from "@/components/LandingPage/HeroSection/HeroSection";
 import MidSection from "@/components/LandingPage/MidSection/MidSection";
@@ -15,6 +16,7 @@ export default function Home() {
       <Sustainability />
       <BuildToEarn />
       <MidSection />
+      <BlogCarousel />
     </>
   );
 }
