@@ -24,7 +24,7 @@ const HandwrittenNumber = ({ number }: Props) => {
 
       <p
         className={`text-2xl absolute
-        top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-600 ${indie.className} `}
+        top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white ${indie.className} `}
       >
         {number}
       </p>

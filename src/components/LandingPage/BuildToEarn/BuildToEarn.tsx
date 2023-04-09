@@ -16,7 +16,7 @@ const BuildToEarn = () => {
 
   return (
     <main className="flex md:min-h-[65vh] min-h-[140vh] relative items-center md:mt-48 text-white w-full justify-between p-5 md:p-10">
-      <div className="gradient-bg-image absolute -top-10 -left-40 w-[120rem] h-[32rem] z-[-1] -rotate-12" />
+      <div className="gradient-bg-image absolute md:-top-10 -top-40 -left-40 w-[120rem] h-[32rem] z-[-1] -rotate-12" />
 
       <div className="md:w-[60%] flex flex-col justify-center items-start gap-5">
         <h1 className="text-2xl md:text-4xl font-bold">#BuildToEarn</h1>
