@@ -5,7 +5,14 @@ const WhitepaperExplainer = () => {
     <div className="relative w-full md:mb-[40rem] mb-[35rem]">
       <div className="flex z-50 absolute flex-col items-center justify-center text-center bg-gradient-to-tr from-blue-400 to-blue-600 px-5 py-20 w-[90%] left-1/2 -translate-x-1/2 rounded-3xl text-white">
         <p className="text-gray-200 text-lg">
-          Read more about 5ire in our{" "}
+          Read more about 5ire in the{" "}
+          <Link
+            className="underline underline-offset-4 hover:text-white"
+            href="/about"
+          >
+            About Us
+          </Link>{" "}
+          page and our{" "}
           <a
             target="_blank"
             rel="noreferrer"
