@@ -3,7 +3,7 @@ import MidSectionStatsImage from "../../../assets/MidSectionStats.svg";
 
 const MidSectionStats = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center px-5 md:mt-96 mt-24 bg-black text-gray-300 py-20">
+    <div className="flex flex-col md:flex-row items-center px-5 md:mt-[35rem] mt-24 bg-black text-gray-300 py-20">
       <section className="relative h-96 w-full md:w-[60%]">
         <Image
           src={MidSectionStatsImage}

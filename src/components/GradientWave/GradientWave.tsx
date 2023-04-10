@@ -8,7 +8,7 @@ const GradientWave = () => {
   }, []);
 
   return (
-    <section className="w-full absolute top-96 left-0 h-[120vh] 2xl:h-[160vh] flex items-center justify-center">
+    <section className="w-full absolute top-96 left-0 h-[180vh] 2xl:h-[170vh] flex items-center justify-center">
       <canvas id="gradient-canvas" data-transition-in />
     </section>
   );

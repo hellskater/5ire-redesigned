@@ -11,7 +11,7 @@ const NftShowCase = () => {
       <h1 className="text-center text-4xl w-[70%] mx-auto text-[#7038ff] font-bold">
         Let&rsquo;s recreate the NFT art eco-system in a sustainable way.
       </h1>
-      <div className="absolute bottom-0 left-0 -rotate-12">
+      <div className="absolute -bottom-20 left-0 -rotate-12">
         <div className="relative h-96 w-96">
           <Image
             src={Lion}
@@ -22,7 +22,7 @@ const NftShowCase = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 right-0 rotate-12">
+      <div className="absolute -bottom-20 right-0 rotate-12">
         <div className="relative h-96 w-96">
           <Image
             src={Azuki}
@@ -33,7 +33,7 @@ const NftShowCase = () => {
         </div>
       </div>
 
-      <div className="absolute top-1/3 left-1/4 rotate-12">
+      <div className="absolute top-1/3 left-1/3 rotate-12">
         <div className="relative h-96 w-96">
           <Image
             src={Gemesis}
