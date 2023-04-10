@@ -5,9 +5,6 @@ import Arrow2 from "../../assets/arrow2.webp";
 import Arrow3 from "../../assets/arrow3.webp";
 import Arrow4 from "../../assets/arrow4.webp";
 import Arrow5 from "../../assets/arrow5.webp";
-import { RiGovernmentFill } from "react-icons/ri";
-import { BsBuildingsFill } from "react-icons/bs";
-import { FaGraduationCap, FaUserTie } from "react-icons/fa";
 import DownSwirly from "../../assets/down-swirly.webp";
 import { useMediaQuery } from "@mantine/hooks";
 import { Indie_Flower } from "next/font/google";
@@ -21,7 +18,7 @@ const Vision = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
-    <div className="min-h-[100vh]">
+    <div className="min-h-[150vh]">
       <div className="relative h-40">
         <Image
           src={DownSwirly}

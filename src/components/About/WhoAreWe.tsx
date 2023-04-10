@@ -5,7 +5,6 @@ import Ellipse from "../../assets/Ellipse.webp";
 import Logo from "../../assets/5ire.png";
 import Swirly from "../../assets/down-swirly.webp";
 import Scribble from "../../assets/Scribble.webp";
-import Head from "next/head";
 
 const indie = Indie_Flower({
   weight: "400",
@@ -16,11 +15,6 @@ const WhoAreWe = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
   return (
     <div className="h-fit">
-      <Head>
-        <title>About Us</title>
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-
       {isDesktop && (
         <div className="absolute top-0 left-0 h-32 w-full bg-gradient-to-r rounded-full -rotate-2 from-blue-500 to-blue-600 z-[-2]"></div>
       )}
