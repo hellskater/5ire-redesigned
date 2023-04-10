@@ -2,22 +2,34 @@ import { useEffect, useState } from "react";
 import { Burger, Menu } from "@mantine/core";
 import { useClickOutside } from "@mantine/hooks";
 import { MdExpandLess, MdExpandMore } from "react-icons/md";
+import Link from "next/link";
 
 const aboutUsOptions = [
-  "About 5ire",
-  "Team",
-  "Blog",
-  "Road to Mainnet",
-  "News & Media",
+  { title: "About 5ire", link: "about" },
+  { title: "Team", link: "#" },
+  { title: "Blog", link: "#" },
+  { title: "Road to Mainnet", link: "#" },
+  { title: "News & Media", link: "#" },
 ];
 
-const testnetOptions = ["Testnet", "Build To Earn", "Documentation"];
+const testnetOptions = [
+  { title: "Testnet", link: "#" },
+  { title: "Build To Earn", link: "#" },
+  { title: "Documentation", link: "#" },
+];
 
-const communityOptions = ["Community", "5ire Ambassador", "Partner with Us"];
+const communityOptions = [
+  { title: "Community", link: "#" },
+  { title: "5ire Ambassador", link: "#" },
+  { title: "Partner with Us", link: "#" },
+];
 
-const researchOptions = ["Research Papers", "Whitepaper"];
+const researchOptions = [
+  { title: "Research Papers", link: "#" },
+  { title: "Whitepaper", link: "#" },
+];
 
-const validatorOptions = ["Become a Validator"];
+const validatorOptions = [{ title: "Become a Validator", link: "#" }];
 
 const menuItems = [
   { title: "About Us", options: aboutUsOptions },
@@ -77,9 +89,13 @@ const NavMenu = () => {
 
               <div className="mt-2 w-full bg-gray-100 p-4 text-xs">
                 {val.options.map((option) => (
-                  <div className="flex flex-col gap-4" key={option}>
-                    <h2 className="pt-4 pb-1 text-gray-500">{option}</h2>
-                  </div>
+                  <Link href={option.link} key={option.link}>
+                    <div className="flex flex-col gap-4">
+                      <h2 className="pt-4 pb-1 text-gray-500">
+                        {option.title}
+                      </h2>
+                    </div>
+                  </Link>
                 ))}
               </div>
             </div>
