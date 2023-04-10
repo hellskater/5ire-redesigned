@@ -17,7 +17,7 @@ const indie = Indie_Flower({
   subsets: ["latin"],
 });
 
-const Mission = () => {
+const Vision = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
@@ -52,7 +52,7 @@ const Mission = () => {
             <p
               className={`${indie.className} md:text-6xl text-4xl text-center`}
             >
-              Our Mision?
+              Our Vision?
             </p>
           </div>
         </div>
@@ -168,4 +168,4 @@ const Mission = () => {
   );
 };
 
-export default Mission;
+export default Vision;

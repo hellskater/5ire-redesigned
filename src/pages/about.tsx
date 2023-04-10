@@ -1,4 +1,4 @@
-import Mission from "@/components/About/Mission";
+import Vision from "@/components/About/Vision";
 import WhoAreWe from "@/components/About/WhoAreWe";
 import Head from "next/head";
 
@@ -11,7 +11,7 @@ const About = () => {
       </Head>
 
       <WhoAreWe />
-      <Mission />
+      <Vision />
     </>
   );
 };
