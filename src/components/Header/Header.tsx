@@ -4,24 +4,27 @@ import Navbar from "./Navbar/Navbar";
 import Scribble from "../../assets/Scribble.webp";
 import { useMediaQuery } from "@mantine/hooks";
 import HamburgerMenu from "./Navbar/HamburgerMenu";
+import Link from "next/link";
 
 const Header = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
   return (
     <header className="flex justify-center items-center gap-16 py-3 px-4 lg:px-16">
       {/* Logo */}
-      <div
-        className={`relative
+      <Link href="/">
+        <div
+          className={`relative
       ${!isDesktop && "bg-black"}
       w-28 lg:h-28 rounded-md h-10 lg:ml-20`}
-      >
-        <Image
-          src="/logo.svg"
-          alt="logo"
-          fill
-          className="h-full p-2 w-full object-contain"
-        />
-      </div>
+        >
+          <Image
+            src="/logo.svg"
+            alt="logo"
+            fill
+            className="h-full p-2 w-full object-contain"
+          />
+        </div>
+      </Link>
 
       <div className="flex items-center gap-5">
         {/* Navbar */}

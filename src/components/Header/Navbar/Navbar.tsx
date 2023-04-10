@@ -2,20 +2,31 @@ import Link from "next/link";
 import Navmenu from "./Navmenu";
 
 const aboutUsOptions = [
-  "About 5ire",
-  "Team",
-  "Blog",
-  "Road to Mainnet",
-  "News & Media",
+  { title: "About 5ire", link: "about" },
+  { title: "Team", link: "#" },
+  { title: "Blog", link: "#" },
+  { title: "Road to Mainnet", link: "#" },
+  { title: "News & Media", link: "#" },
 ];
 
-const testnetOptions = ["Testnet", "Build To Earn", "Documentation"];
+const testnetOptions = [
+  { title: "Testnet", link: "#" },
+  { title: "Build To Earn", link: "#" },
+  { title: "Documentation", link: "#" },
+];
 
-const communityOptions = ["Community", "5ire Ambassador", "Partner with Us"];
+const communityOptions = [
+  { title: "Community", link: "#" },
+  { title: "5ire Ambassador", link: "#" },
+  { title: "Partner with Us", link: "#" },
+];
 
-const researchOptions = ["Research Papers", "Whitepaper"];
+const researchOptions = [
+  { title: "Research Papers", link: "#" },
+  { title: "Whitepaper", link: "#" },
+];
 
-const validatorOptions = ["Become a Validator"];
+const validatorOptions = [{ title: "Become a Validator", link: "#" }];
 
 const Navbar = () => {
   return (

@@ -1,9 +1,13 @@
 import { Menu, Transition } from "@headlessui/react";
+import Link from "next/link";
 import { Fragment } from "react";
 import { BiChevronDown } from "react-icons/bi";
 
 type Props = {
-  options: string[];
+  options: {
+    title: string;
+    link: string;
+  }[];
   title: string;
 };
 
@@ -31,7 +35,7 @@ export default function Navmenu({ options, title }: Props) {
         <Menu.Items className="absolute right-0 mt-2 w-36 rounded-md bg-white shadow-lg focus:outline-none">
           <div className="px-1 py-1 w-full h-full">
             {options.map((option) => (
-              <CustomMenuItem key={option} option={option} />
+              <CustomMenuItem key={option.link} option={option} />
             ))}
           </div>
         </Menu.Items>
@@ -41,18 +45,23 @@ export default function Navmenu({ options, title }: Props) {
 }
 
 type CustomMenuItemProps = {
-  option: string;
+  option: {
+    title: string;
+    link: string;
+  };
 };
 
 const CustomMenuItem = ({ option }: CustomMenuItemProps) => {
   return (
     <Menu.Item>
-      <button
-        className="hover:bg-gradient-to-r from-[#FFA500] to-[#FFD700] hover:text-white
+      <Link href={option.link}>
+        <button
+          className="hover:bg-gradient-to-r from-[#FFA500] to-[#FFD700] hover:text-white
       group text-left text-gray-700 flex w-full items-center rounded-md px-2 py-2 text-sm"
-      >
-        {option}
-      </button>
+        >
+          {option.title}
+        </button>
+      </Link>
     </Menu.Item>
   );
 };
