@@ -10,11 +10,17 @@ const indie = Indie_Flower({
 
 type Props = {
   number: number;
+  text?: string;
+  size?: "small" | "large";
 };
 
-const HandwrittenNumber = ({ number }: Props) => {
+const HandwrittenNumber = ({ number, text, size }: Props) => {
   return (
-    <div className="relative h-12 w-12">
+    <div
+      className={`relative
+    ${size && size === "large" ? "h-24 w-24" : "h-12 w-12"}
+    `}
+    >
       <Image
         src={CircleSmall}
         alt="circle"
@@ -23,8 +29,12 @@ const HandwrittenNumber = ({ number }: Props) => {
       />
 
       <p
-        className={`text-2xl absolute
-        top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white ${indie.className} `}
+        className={` ${
+          size && size === "large" ? "text-4xl" : "text-2xl"
+        }  absolute
+        top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${
+          text || "text-white"
+        } ${indie.className} `}
       >
         {number}
       </p>
